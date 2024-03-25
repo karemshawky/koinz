@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "837880ac-7701-44f8-bad1-8f19fa0db3fa",
+		"name": "Koinz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21239631",
+		"_collection_link": "https://solar-zodiac-745461.postman.co/workspace/Team-Workspace~89385ce3-990b-4b43-8a40-7704f056ef5a/collection/21239631-837880ac-7701-44f8-bad1-8f19fa0db3fa?action=share&source=collection_link&creator=21239631"
+	},
+	"item": [
+		{
+			"name": "List most five read book pages",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://koinz.localhost/api/most-read",
+					"protocol": "http",
+					"host": [
+						"koinz",
+						"localhost"
+					],
+					"path": [
+						"api",
+						"most-read"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 Ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://koinz.localhost/api/most-read",
+							"protocol": "http",
+							"host": [
+								"koinz",
+								"localhost"
+							],
+							"path": [
+								"api",
+								"most-read"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Mar 2024 21:13:06 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "phpdebugbar-id",
+							"value": "Xf7a04ec999beda0f85862e28a14fc516"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"book_id\": 1,\n            \"book_name\": \"Quia a itaque.\",\n            \"num_of_read_pages\": 29\n        },\n        {\n            \"book_id\": 2,\n            \"book_name\": \"Repellendus et soluta.\",\n            \"num_of_read_pages\": 21\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Submit read book pages",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "book_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "start_page",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "end_page",
+							"value": "70",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://koinz.localhost/api/submit-read",
+					"protocol": "http",
+					"host": [
+						"koinz",
+						"localhost"
+					],
+					"path": [
+						"api",
+						"submit-read"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "422 Validation error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "book_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "start_page",
+									"value": "55",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "end_page",
+									"value": "70",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://koinz.localhost/api/submit-read",
+							"protocol": "http",
+							"host": [
+								"koinz",
+								"localhost"
+							],
+							"path": [
+								"api",
+								"submit-read"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Mar 2024 21:15:44 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "phpdebugbar-id",
+							"value": "X94e3b6b9975604ab5a51919ccd61bd0b"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"The book id field is required. (and 2 more errors)\",\n    \"errors\": {\n        \"book_id\": [\n            \"The book id field is required.\"\n        ],\n        \"start_page\": [\n            \"The start page field is required.\"\n        ],\n        \"end_page\": [\n            \"The end page field is required.\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "201 Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "book_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "start_page",
+									"value": "55",
+									"type": "text"
+								},
+								{
+									"key": "end_page",
+									"value": "70",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://koinz.localhost/api/submit-read",
+							"protocol": "http",
+							"host": [
+								"koinz",
+								"localhost"
+							],
+							"path": [
+								"api",
+								"submit-read"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Mar 2024 21:23:40 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "phpdebugbar-id",
+							"value": "X0405f52fcbd81619514eb56f658d70ad"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Created successfully.\"\n}"
+				}
+			]
+		}
+	]
+}
